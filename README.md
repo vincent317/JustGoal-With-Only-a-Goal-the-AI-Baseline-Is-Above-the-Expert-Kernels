@@ -1,6 +1,6 @@
 <div align="center">
 
-# JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal
+# JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels
 
 **GPU kernels written on NVIDIA B200 by a general-purpose agent given only an optimization goal**
 
@@ -13,24 +13,24 @@
 [![Stars](https://img.shields.io/github/stars/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal?style=flat)](https://github.com/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal/stargazers)
 [![Issues](https://img.shields.io/github/issues/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal)](https://github.com/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal/issues)
 
-<img src="assets/figure3.png" width="80%" alt="Speedup of JustGoal and the KDA-0.5 reproduction over the reference kernel across model generations on four operators">
+<img src="assets/figure3.png" width="80%" alt="Speedup of single-shape JustGoal and the KDA-0.5 reproduction (whole definition) over the reference kernel across model generations on four operators">
 
-<sub>Speedup of JustGoal and the KDA-0.5 reproduction over the reference kernel across model
-generations on four operators; each bar is the geometric mean over the operator's shapes, the
-dashed line is the reference kernel.</sub>
+<sub>Speedup of single-shape JustGoal and the KDA-0.5 reproduction (whole definition) over the
+reference kernel across model generations on four operators; each bar is the geometric mean
+over the operator's shapes, the dashed line is the reference kernel.</sub>
 
 </div>
 
 This repository releases the operator (kernel) code from the paper
-[*JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal*](paper.pdf).
+[*JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels*](paper.pdf).
 JustGoal gives a general-purpose agent only an optimization objective and constraints, without
 kernel-specific evaluation infrastructure, knowledge bases, or search workflows. The agent builds
 its own evaluation loop and iterates on its implementations. On NVIDIA B200, JustGoal outperforms
-the evaluated open-source library implementations on **9 of 11** operators, with per-operator
-geometric mean speedups of **1.14–2.34×**, and surpasses the fastest evaluated agent-generated
-implementation on **5 of the 10** operators that have one. With **Fable 5.1**, single-shape
-JustGoal achieves a geometric mean speedup of **1.24×** across 12 evaluation shapes over our
-KDA-0.5 reproduction.
+open-source libraries on **8 of the 10** operators entering the comparison, with per-operator
+geometric mean speedups of **1.14–2.34×**, and surpasses the fastest publicly released
+specialized-agent kernel on **5 of the 9** operators that have one. In a same-model comparison
+with **Fable 5.1** on single shapes, the KDA-0.5 harness reaches **0.95×** the performance of
+JustGoal.
 
 ## Repository Layout
 
@@ -71,7 +71,7 @@ build failures, and retest results from other B200 setups.
 
 ```bibtex
 @misc{chen2026justgoal,
-  title  = {JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal},
+  title  = {JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels},
   author = {Chen, Yaojian and Peng, Dazhi and Zhu, Zhui and Li, Leshan and Sun, Haojun
             and Zheng, Yiyun and He, Qingfeng and Li, Shangzhan and Deng, Xianglong
             and Shen, Yifei and Xiang, Shengye and Li, Zhen and Gan, Lin and Li, Yuxuan
