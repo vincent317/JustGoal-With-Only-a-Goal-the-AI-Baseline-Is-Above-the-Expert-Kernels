@@ -1,6 +1,6 @@
 <div align="center">
 
-# JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal
+# JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels
 
 **只给通用 agent 一个优化目标，在 NVIDIA B200 上写出的 GPU 算子**
 
@@ -13,21 +13,20 @@
 [![Stars](https://img.shields.io/github/stars/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal?style=flat)](https://github.com/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal/stargazers)
 [![Issues](https://img.shields.io/github/issues/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal)](https://github.com/vincent317/JustGoal-Surpassing-Expert-Kernels-and-Specialized-Kernel-Agents-with-Only-a-Goal/issues)
 
-<img src="assets/figure3.png" width="80%" alt="JustGoal 与 KDA-0.5 复现在四个算子上跨三代模型相对参照算子的加速比">
+<img src="assets/figure3.png" width="80%" alt="单 shape JustGoal 与 KDA-0.5 复现（整个定义）在四个算子上跨三代模型相对参照算子的加速比">
 
-<sub>JustGoal 与 KDA-0.5 复现在四个算子上跨三代模型相对参照算子的加速比；每根柱子是该算子各
-shape 的几何平均，虚线为参照算子。</sub>
+<sub>单 shape JustGoal 与 KDA-0.5 复现（整个定义）在四个算子上跨三代模型相对参照算子的加速比；
+每根柱子是该算子各 shape 的几何平均，虚线为参照算子。</sub>
 
 </div>
 
 本仓库发布论文
-[*JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal*](paper.pdf)
+[*JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels*](paper.pdf)
 中生成的算子（kernel）代码。JustGoal 只给通用 agent 一个优化目标和约束，不预先配置任何算子专用的
 评测设施、知识库或搜索工作流；agent 自己搭建评测循环并迭代优化实现。在 NVIDIA B200 上，JustGoal
-在 **11 个算子中的 9 个**上超过所评测的开源库实现，逐算子几何平均加速比为 **1.14–2.34×**；在有
-专用 kernel agent 基线的 10 个算子中，有 **5 个**超过所评测的最快 agent 生成实现。使用
-**Fable 5.1** 时，单 shape JustGoal 在 12 个评测 shape 上相对我们的 KDA-0.5 复现取得 **1.24×**
-的几何平均加速比。
+在参与比较的 **10 个算子中的 8 个**上超过开源库，逐算子几何平均加速比为 **1.14–2.34×**；在有公开
+专用 kernel agent 算子的 9 个算子中，有 **5 个**超过其中最快的实现。在 **Fable 5.1** 单 shape
+的同模型对比中，KDA-0.5 harness 的性能是 JustGoal 的 **0.95×**。
 
 ## 仓库结构
 
@@ -66,7 +65,7 @@ flashinfer-bench 的 definition；`kda05_reproduction_full_shape/` 再下一层�
 
 ```bibtex
 @misc{chen2026justgoal,
-  title  = {JustGoal: Surpassing Expert Kernels and Specialized Kernel Agents with Only a Goal},
+  title  = {JustGoal: With Only a Goal, the AI Baseline Is Above the Expert Kernels},
   author = {Chen, Yaojian and Peng, Dazhi and Zhu, Zhui and Li, Leshan and Sun, Haojun
             and Zheng, Yiyun and He, Qingfeng and Li, Shangzhan and Deng, Xianglong
             and Shen, Yifei and Xiang, Shengye and Li, Zhen and Gan, Lin and Li, Yuxuan
